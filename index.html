@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test page</title>
+    <link rel="stylesheet" href="/styles/style.css" type="text/css" />
+</head>
+
+<body>
+    <form id="frm1" class="form-style-7">
+        <h1>Заполните форму и нажмите create Report</h1>
+        <li>
+            <label for="email">email</label>
+            <input id="inEmail" type="email" name="email" placeholder="s.shmulich@extreme-ltd.com.ua">
+            <span>Enter your email</span>
+        </li>
+
+        <li>
+            <label for="password">password</label>
+            <input id="inPassword" type="password" name="password" placeholder="Ваш пароль">
+            <span>Enter your password</span>
+        </li>
+
+        <li>
+            <label for="name">ПІБ</label>
+            <input id="in1" type="text" name="fname" placeholder="Шмуліч С.Л.">
+            <span>ПІБ</span>
+        </li>
+
+        <li>
+            <label for="position">Посада</label>
+            <input id="position" type="text" name="position" placeholder="Інженер-конструктор I категорії">
+            <span>Посада</span>
+        </li>
+        <li>
+            <label for="destinationOrganization">На підприємство</label>
+            <input id="in2" type="text" name="lname" placeholder='ТОВ "Екстрім ЛТД"'>
+            <span>На підприємство</span>
+        </li>
+        <li>
+            <label for="destinationAddress">Адреса відрядження</label>
+            <input id="in3" type="text" name="lname" placeholder="м. Бориспіль">
+            <span>Адреса відрядження</span>
+        </li>
+        <li>
+            <label for="businessTripMission">Мета відрядження</label>
+            <input id="in4" type="text" name="lname" placeholder="Участь у нараді">
+            <span>Мета відрядження</span>
+        </li>
+        <li>
+            <label for="selectDateIn">Дата вибуття</label>
+            <input id="dateIn" type="date" name="calendar">
+            <span>Дата вибуття</span>
+        </li>
+        <li>
+            <label for="selectDateOut">Дата прибуття</label>
+            <input id="dateOut" type="date" name="calendar">
+            <span>Дата прибуття</span>
+        </li>
+        <li>
+            <label for="transport">Проїзд до місця відрядження здійснюється</label>
+            <select id="transport">
+            <option selected value="Поїздом">Поїздом</option>
+            <option value="Автобусом">Автобусом</option>
+            <option value="Автомобілем">Автомобілем</option>
+          </select>
+            <span>Проїзд до місця відрядження здійснюється</span>
+        </li>
+        <li class="transportCostStytle">
+            <label for="noTickets">Без квитків</label>
+            <input id="noTickets" type="checkbox" name="noTickets">
+            <span>Без квитків</span>
+        </li>
+        <li class="transportCostStytle">
+            <label for="transportCost">Витрати на транспорт</label>
+            <input id="transportCost" type="text" name="transportCost" placeholder="1050">
+            <span>Витрати на транспорт</span>
+        </li>
+        <li id="typeOfCarStytle" style="display: none;">
+            <label for="typeOfCar">Type of car</label>
+            <input id="typeOfCar" type="text" name="typeOfCar">
+            <span>Enter type of car</span>
+        </li>
+        <li>
+            <label for="hotelCost">Витрати на готель</label>
+            <input id="hotelCost" type="text" name="lname" placeholder="700">
+            <span>Витрати на готель</span>
+        </li>
+        <li>
+            <label for="dayPayment">Добові</label>
+            <select id="dayPayment">
+            <option selected value="260">260</option>
+          </select>
+            <span>Добові</span>
+        </li>
+        <li class="noTicketsStytle">
+            <label for="ticketsFile">Квитки</label>
+            <input id="ticketsFile" name="myFile" type="file" accept="application/pdf">
+            <span>Квитки</span>
+        </li>
+        <li>
+            <input type="button" value="create Report" onclick="createReport()">
+        </li>
+    </form>
+
+
+    <script src="js/pdfmake.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/scriptForStyle.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script charset="utf-8" src="js/script.js"></script>
+</body>
+
+</html>
